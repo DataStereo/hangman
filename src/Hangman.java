@@ -1,23 +1,24 @@
 public class Hangman {
+    private boolean running = false;
+    private RandomWord word = new RandomWord();
 
-    private boolean running = true;
     public void run() {
         do {
             displayWord();
             getUserInput();
             checkUserInput();
-        }while (running);
+        } while (running);
     }
 
-    void displayWord(){
-        System.out.println("display word");
+    void checkUserInput() {
+        System.out.println("check user input");
     }
 
-    void getUserInput(){
+    void getUserInput() {
         System.out.println("get user input");
     }
 
-    void checkUserInput(){
-        System.out.println("check user input");
+    void displayWord() {
+        System.out.println(word);
     }
 }
