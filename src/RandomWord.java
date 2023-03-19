@@ -12,16 +12,16 @@ public class RandomWord {
         characters = new char[chosenWord.length()];
     }
     public String toString(){
-        String text = "";
+        StringBuilder sb = new StringBuilder();
         characters[1] = 'b';
         for(char c: characters){
             if (c=='\u0000'){
-                text += '_';
+                sb.append('_');
             }else {
-                text += c;
+                sb.append(c);
             }
-            text += ' ';
+            sb.append(' ');
         }
-        return text;
+        return sb.toString();
     }
 }
