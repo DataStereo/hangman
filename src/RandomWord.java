@@ -5,11 +5,23 @@ public class RandomWord {
 
     private String chosenWord;
     private Random random = new Random();
+    private char[] characters;
 
     public RandomWord(){
         chosenWord = words[random.nextInt(words.length)];
+        characters = new char[chosenWord.length()];
     }
     public String toString(){
-        return chosenWord;
+        String text = "";
+        characters[1] = 'b';
+        for(char c: characters){
+            if (c=='\u0000'){
+                text += '_';
+            }else {
+                text += c;
+            }
+            text += ' ';
+        }
+        return text;
     }
 }
