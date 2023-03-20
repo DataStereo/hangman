@@ -3,5 +3,6 @@ public class Main {
 
         Hangman game = new Hangman();
         game.run();
+        game.close();
     }
 }

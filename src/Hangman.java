@@ -14,9 +14,6 @@ public class Hangman {
     }
 
     void checkUserInput() {
-        // Ask user to enter a character
-        // Get a character as a string
-        // Pass the character to a random word as the argument to method
         System.out.print("Enter your guess: ");
         String guess = scanner.nextLine();
         word.addGuess(guess.charAt(0));
@@ -28,5 +25,9 @@ public class Hangman {
 
     void displayWord() {
         System.out.println(word);
+    }
+
+    public void close() {
+        scanner.close();
     }
 }
