@@ -20,4 +20,13 @@ public class RandomWord {
         }
         return sb.toString();
     }
+
+    public void addGuess(char c) {
+        // Fill in c in character array
+        for(int i = 0; i < chosenWord.length(); i++){
+            if(c == chosenWord.charAt(i)){
+                characters[i] = c;
+            }
+        }
+    }
 }
