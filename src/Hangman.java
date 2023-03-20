@@ -14,13 +14,17 @@ public class Hangman {
     }
 
     void checkUserInput() {
-        System.out.print("Enter your guess: ");
-        String guess = scanner.nextLine();
-        word.addGuess(guess.charAt(0));
+        if (word.isCompleate()){
+            System.out.println("You have won");
+            running = false;
+            System.out.println("The word is " + word);
+        }
     }
 
     void getUserInput() {
-        System.out.println("get user input");
+        System.out.print("Enter your guess: ");
+        String guess = scanner.nextLine();
+        word.addGuess(guess.charAt(0));
     }
 
     void displayWord() {

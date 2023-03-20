@@ -21,6 +21,15 @@ public class RandomWord {
         return sb.toString();
     }
 
+    public boolean isCompleate(){
+        for (char c: characters){
+            if(c == '\u0000'){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void addGuess(char c) {
         // Fill in c in character array
         for(int i = 0; i < chosenWord.length(); i++){
