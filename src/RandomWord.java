@@ -2,7 +2,6 @@ import java.util.Random;
 
 public class RandomWord {
     private String[] words = {"father", "family", "infant", "tongue", "explicit", "authority", "tombstone", "blacksmith", "likeness", "photographs", "regarding", "unreasonably", "character", "inscription", "conclusion", "brothers", "exceedingly", "religiously", "ed", "existence"};
-
     private String chosenWord;
     private Random random = new Random();
     private char[] characters;
@@ -30,12 +29,15 @@ public class RandomWord {
         return true;
     }
 
-    public void addGuess(char c) {
+    public boolean addGuess(char c) {
         // Fill in c in character array
+        boolean correct = false;
         for(int i = 0; i < chosenWord.length(); i++){
             if(c == chosenWord.charAt(i)){
                 characters[i] = c;
+                correct = true;
             }
         }
+        return correct;
     }
 }
