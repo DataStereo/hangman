@@ -13,13 +13,9 @@ public class RandomWord {
     }
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        characters[1] = 'b';
+
         for(char c: characters){
-            if (c=='\u0000'){
-                sb.append('_');
-            }else {
-                sb.append(c);
-            }
+            sb.append(c=='\u0000' ? '_': c);
             sb.append(' ');
         }
         return sb.toString();
